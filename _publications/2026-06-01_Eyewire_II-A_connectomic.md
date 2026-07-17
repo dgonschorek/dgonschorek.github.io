@@ -6,7 +6,7 @@ permalink: /publication/2026-06-01_Eyewire_II-A_connectomic
 excerpt: 'A large-scale volumetric electron microscopy connectomic resource resolving cell types and circuits of the mouse retina.'
 date: 2026-06-01
 venue: 'bioRxiv'
-paperurl: 'https://europepmc.org/articles/pmc13252113'
+paperurl: 'https://www.biorxiv.org/content/10.64898/2026.05.28.727403v1'
 citation: 'Stroh, S., Ebert, S., Fadjukov, J., Lause, J., Oesterle, J., Franke, K., Huang, Z., Lu, R., Matsliah, A., Berson, D., Sherathiya, V., Gonschorek, D., Schubert, T., David, C., Sorek, M., Sterling, A., Serafetinidis, N., Singer, J., Tsukamoto, Y., Maeyama, H., Omi, N., Schwartz, G., Berens, P., Seung, H. S., &amp; Euler, T. (2026). &quot;Eyewire II—A connectomic resource for resolving cell types and circuits of the mouse retina.&quot; <i>bioRxiv</i>.'
 ---
 
