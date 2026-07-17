@@ -6,9 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-About me
-======
-
 I am Dr. Dominic Gonschorek currently a postdoctoral researcher at the University of Tübingen in the [Eulerlab](https://eulerlab.de/).
 
 Research Interests
