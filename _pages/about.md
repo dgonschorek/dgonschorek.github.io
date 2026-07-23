@@ -8,6 +8,10 @@ redirect_from:
 ---
 I am Dr. Dominic Gonschorek currently a postdoctoral researcher at the University of Tübingen in the [Eulerlab](https://eulerlab.de/).
 
+## Recent News
+
+- **July 2026** — Our paper "[The openretina Project: Collaborative Retina Modelling Across Datasets and Species](https://elifesciences.org/reviewed-preprints/111328)" is now published as a reviewed preprint in eLife. openretina is an open-source Python package that provides a standardized framework for training, evaluating, and comparing deep learning models of the retina across datasets and species.
+
 ## Research Interests
 
 Broadly, I am fascinated by how the brain makes sense of the visual world, and I use the retina as a model system to get at this question, since it is small and accessible enough to study rigorously, yet already performs surprisingly sophisticated computations. A recurring theme in my work is that neural coding is not fixed: circuits continuously adapt to context, and part of my research looks at the neuromodulators (e.g., nitric oxide, endocannabinoids, histamine) that give the visual system this flexibility.
