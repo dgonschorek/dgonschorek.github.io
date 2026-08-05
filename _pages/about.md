@@ -10,6 +10,8 @@ I am Dr. Dominic Gonschorek currently a postdoctoral researcher at the Universit
 
 ## Recent News
 
+- **August 2026** — Our dataset paper "[ALL-GCL: A large-scale dataset of functional mouse ganglion cell layer responses](https://www.biorxiv.org/content/10.64898/2025.12.04.691221v1.abstract)" got accepted in Scientific Data and will be published soon. ALL-GCL contains functional recordings from more than 80,000 mouse ganglion cell layer neurons, together with standardized metadata, pretrained classifiers, tutorials, and analysis code for reproducible neuroscience. The code can be found on [GitHub](https://github.com/eulerlab/all-GCL-manuscript) and the dataset on [HuggingFace](https://huggingface.co/datasets/eulerlab/all-gcl).
+
 - **July 2026** — Our paper "[The openretina Project: Collaborative Retina Modelling Across Datasets and Species](https://elifesciences.org/reviewed-preprints/111328)" is now published as a reviewed preprint in eLife. openretina is an open-source Python package that provides a standardized framework for training, evaluating, and comparing deep learning models of the retina across datasets and species.
 
 ## Research Interests
