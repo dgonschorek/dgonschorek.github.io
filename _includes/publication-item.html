@@ -1,0 +1,18 @@
+{%- comment -%}
+  One publication in a list. Params: pub, compact (abbreviate long author lists)
+{%- endcomment -%}
+{% include base_path %}
+{% assign p = include.pub %}
+<li class="pub">
+  <div class="pub__year"><time datetime="{{ p.date | date_to_xmlschema }}">{{ p.date | date: "%Y" }}</time></div>
+  <div class="pub__body">
+    <h3 class="pub__title"><a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a></h3>
+    <p class="pub__authors">{% include pub-authors.html authors=p.authors compact=true %}</p>
+    <p class="pub__venue">
+      <em>{{ p.venue }}</em>{% if p.venue_details %}, {{ p.venue_details }}{% endif %}
+      {% if p.note %}<span class="pub__sep" aria-hidden="true">·</span> {{ p.note }}{% endif %}
+      {% if p.role %}<span class="tag tag--accent">{{ p.role }}</span>{% endif %}
+    </p>
+    {% include pub-links.html pub=p %}
+  </div>
+</li>

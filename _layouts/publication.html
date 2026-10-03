@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+{% include base_path %}
+{% assign pub = page %}
+{% capture authors_plain %}{% for a in pub.authors %}{{ a | remove: "*" | remove: "+" | remove: "§" }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+
+<div id="main" role="main" tabindex="-1">
+  {% include sidebar.html %}
+
+  <article class="page publication-page" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <div class="page__inner-wrap">
+      <header class="page__header">
+        <p class="page__kicker">
+          <a href="{{ base_path }}/publications/">Publications</a>
+          <span aria-hidden="true">/</span>
+          {{ site.publication_category[pub.category].title | default: "Publication" }}
+        </p>
+        <h1 class="page__title" itemprop="headline">{{ pub.title }}</h1>
+        <p class="pub__authors">{% include pub-authors.html authors=pub.authors %}</p>
+        <p class="pub__venue">
+          <em itemprop="isPartOf">{{ pub.venue }}</em>{% if pub.venue_details %}, {{ pub.venue_details }}{% endif %}
+          <span class="pub__sep" aria-hidden="true">·</span>
+          <time datetime="{{ pub.date | date_to_xmlschema }}" itemprop="datePublished">{{ pub.date | date: "%Y" }}</time>
+          {% if pub.note %}<span class="pub__sep" aria-hidden="true">·</span> {{ pub.note }}{% endif %}
+        </p>
+        {% if pub.role %}<p class="pub__role-line"><span class="tag tag--accent">{{ pub.role }}</span></p>{% endif %}
+        {% include pub-links.html pub=pub style="buttons" %}
+      </header>
+
+      <section class="page__content" itemprop="abstract">
+        <h2 class="section-label">Summary</h2>
+        {{ content }}
+      </section>
+
+      <section class="pub__cite">
+        <h2 class="section-label">Citation</h2>
+        <p class="pub__citation">{{ authors_plain | strip }} ({{ pub.date | date: "%Y" }}). {{ pub.title }}. <em>{{ pub.venue }}</em>{% if pub.venue_details %}, {{ pub.venue_details }}{% endif %}.{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">https://doi.org/{{ pub.doi }}</a>{% endif %}</p>
+        {% include pub-legend.html authors=pub.authors %}
+      </section>
+
+      <p class="page__back"><a href="{{ base_path }}/publications/">&larr; All publications</a></p>
+    </div>
+  </article>
+</div>

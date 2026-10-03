@@ -1,0 +1,25 @@
+{%- comment -%}
+  Renders an author list, highlighting "Gonschorek, D." and showing contribution
+  markers (* shared first, + shared second, § shared senior) as superscripts.
+  Params: authors (list), compact (true: abbreviate lists longer than 20 names)
+{%- endcomment -%}
+{%- assign me = "Gonschorek, D." -%}
+{%- assign n = include.authors.size -%}
+{%- assign skipped = false -%}
+{%- for a in include.authors -%}
+  {%- assign name = a | remove: "*" | remove: "+" | remove: "§" | strip -%}
+  {%- assign mark = a | remove: name | strip -%}
+  {%- assign show = true -%}
+  {%- if include.compact and n > 20 -%}
+    {%- assign show = false -%}
+    {%- if forloop.index <= 3 or forloop.last or name == me -%}{%- assign show = true -%}{%- endif -%}
+  {%- endif -%}
+  {%- if show -%}
+    {%- if skipped -%}<span class="pub__ellipsis" title="{{ n }} authors in total">…</span>, {% assign skipped = false -%}{%- endif -%}
+    {%- if name == me -%}<span class="me">{{ name }}</span>{%- else -%}{{ name }}{%- endif -%}
+    {%- if mark != "" -%}<sup>{{ mark }}</sup>{%- endif -%}
+    {%- unless forloop.last -%}, {% endunless -%}
+  {%- else -%}
+    {%- assign skipped = true -%}
+  {%- endif -%}
+{%- endfor -%}

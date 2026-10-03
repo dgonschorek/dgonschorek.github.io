@@ -1,36 +1,75 @@
 ---
 permalink: /
-title: "About me"
+title: "Dominic Gonschorek"
+kicker: "Computational & Systems Neuroscience"
+description: "Dominic Gonschorek is a computational and systems neuroscientist in Tübingen. He studies how visual circuits encode the world, combining large-scale neural recordings with machine learning and open, reusable datasets."
 author_profile: true
-redirect_from: 
+page_class: home
+redirect_from:
   - /about/
   - /about.html
 ---
-I am Dr. Dominic Gonschorek currently a postdoctoral researcher at the University of Tübingen in the [Eulerlab](https://eulerlab.de/).
 
-## Recent News
+<p class="intro">
+I study how neural circuits encode the visual world, and how that encoding changes with context.
+My work centres on the mouse retina and its projections to the superior colliculus. I combine
+large-scale functional recordings with machine learning models of neural activity.
+</p>
 
-- **August 2026** — Our dataset paper "[ALL-GCL: A large-scale dataset of functional mouse ganglion cell layer responses](https://www.nature.com/articles/s41597-026-08026-0)" got published in Scientific Data! ALL-GCL contains functional recordings from more than 80,000 mouse ganglion cell layer neurons, together with standardized metadata, pretrained classifiers, tutorials, and analysis code for reproducible neuroscience. The code can be found on [GitHub](https://github.com/eulerlab/all-GCL-manuscript) and the dataset on [HuggingFace](https://huggingface.co/datasets/eulerlab/all-gcl).
+I am a postdoctoral researcher in the [Euler Lab](https://eulerlab.de/) at the University of Tübingen.
+Besides running experiments, I develop the computational side of the work: methods that integrate data
+across experiments, models that predict neural responses, representation learning for neural time series,
+and curated datasets and software that other labs can reuse.
 
-- **July 2026** — Our paper "[The openretina Project: Collaborative Retina Modelling Across Datasets and Species](https://elifesciences.org/reviewed-preprints/111328)" is now published as a reviewed preprint in eLife. openretina is an open-source Python package that provides a standardized framework for training, evaluating, and comparing deep learning models of the retina across datasets and species.
+<!-- TODO (optional): one sentence on what you are working on right now that is not yet public, e.g. "I am currently ..." -->
 
-- **June 2026** — Our Eyewire II Preprint "[Eyewire II-A connectomic resource for resolving cell types and circuits of the mouse retina](https://www.biorxiv.org/content/10.64898/2026.05.28.727403v1)" is out now on bioRxiv! This large-scale electron microscopy dataset of the mouse retina combines comprehensive connectivity with functional recordings, providing an unprecedented resource for studying retinal cell types and neural circuits.
+<ul class="methods" aria-label="Methods">
+  <li>Two-photon imaging</li>
+  <li>Multi-electrode array recordings</li>
+  <li>Deep learning models of neural responses</li>
+  <li>Self-supervised representation learning</li>
+  <li>Large-scale data integration</li>
+  <li>Python</li>
+</ul>
 
-- **May 2026** — New Preprint out on bioRxiv! "[On-Off coding is latent in vertebrate visual circuits](https://www.biorxiv.org/content/10.64898/2026.05.01.722149v1)". Our work challenges the classical view of On and Off visual pathways as fixed circuit features. Instead, we show that polarity is dynamically shaped by inhibitory networks and sensory context across the visual system.
+## Research themes {#themes}
 
-- **May 2026** — Our NeurIPS 2025 Paper is finally published! [TRACE: Contrastive learning for multi-trial time series data in neuroscience](https://proceedings.neurips.cc/paper_files/paper/2025/file/728e11c3b1d0fc7e13f85f661b62dcbb-Paper-Conference.pdf) is a new self-supervised framework for analyzing large-scale neural recordings. It exploits repeated stimulus trials to learn robust representations of neural activity, outperforming existing contrastive learning approaches.
+<div class="themes">
+  <a class="theme" href="/research/#visual-coding">
+    <h3 class="theme__title">Visual coding & cell types</h3>
+    <p>How the retina's parallel output channels encode visual input, and how these signals are organized in the superior colliculus.</p>
+  </a>
+  <a class="theme" href="/research/#neuromodulation">
+    <h3 class="theme__title">Neuromodulation & context</h3>
+    <p>How neuromodulators such as nitric oxide and histamine reshape retinal computations depending on brain state and context.</p>
+  </a>
+  <a class="theme" href="/research/#machine-learning">
+    <h3 class="theme__title">Machine learning for neuroscience</h3>
+    <p>Predictive models of neural responses, contrastive learning for multi-trial recordings, and removal of variability between experiments.</p>
+  </a>
+  <a class="theme" href="/research/#open-science">
+    <h3 class="theme__title">Open datasets & tools</h3>
+    <p>Curated large-scale datasets, shared modelling frameworks and connectomic resources that make results reusable across labs.</p>
+  </a>
+</div>
 
-- **April 2026** — New Preprint on [The functional organization of retinal input to the mouse superior colliculus](https://www.biorxiv.org/content/10.64898/2026.04.15.718783v1) out on bioRxiv! Our latest work provides the first comprehensive functional map of retinal input to the superior colliculus. Combining large-scale _in vivo_ recordings with deep learning, we show that nearly the full diversity of retinal ganglion cell types is preserved and organized in systematic functional gradients. Code can be found on [GitHub](https://github.com/yongrong-qiu/retina-axon-model) and the model on [Google Colab](https://colab.research.google.com/drive/1k9411tLWNcDlUX7nYDsU_grMwafiI3qw?usp=sharing).
+## Selected work {#selected}
 
+{% assign selected = site.publications | where: "selected", true | sort: "date" | reverse %}
+<ol class="pub-list pub-list--compact">
+  {% for p in selected %}{% include publication-item.html pub=p %}{% endfor %}
+</ol>
 
-## Research Interests
+<p class="more-link"><a href="/publications/">All publications &rarr;</a></p>
 
-Broadly, I am fascinated by how the brain makes sense of the visual world, and I use the retina as a model system to get at this question, since it is small and accessible enough to study rigorously, yet already performs surprisingly sophisticated computations. A recurring theme in my work is that neural coding is not fixed: circuits continuously adapt to context, and part of my research looks at the neuromodulators (e.g., nitric oxide, endocannabinoids, histamine) that give the visual system this flexibility.
+## News {#news}
 
-I also care a lot about the tools we use to study the brain. Modern neuroscience generates rich, high-dimensional data, and I develop computational and machine learning approaches, from deep learning models of neural responses to representation learning methods for neural time series, to help extract meaningful structure from this data and connect it back to biological principles.
+{% include news-list.html limit=4 %}
 
-Finally, I believe many of the field's biggest questions require data and effort beyond what a single lab can produce, so I invest in building shared, large-scale datasets, open-source software, and connectomic resources that make research more reproducible and cumulative across labs.
+<p class="more-link"><a href="/news/">All news &rarr;</a></p>
 
-## Get in touch
+## Contact {#contact}
 
-I enjoy talking science and always welcome the chance to connect with fellow researchers, students, and anyone curious about vision and the brain. Whether you're interested in a potential collaboration, have questions about my work, or are a student exploring a career in neuroscience, please don't hesitate to reach out. I'd be glad to hear from you.
+I am happy to hear from researchers interested in collaborating, students looking for projects, and anyone curious about vision and the brain.
+The best way to reach me is by email at <a href="mailto:dominic.gonschorek@cin.uni-tuebingen.de">dominic.gonschorek@cin.uni-tuebingen.de</a>.
+You can also find me on [Google Scholar](https://scholar.google.de/citations?user=1HUhiwoAAAAJ), [GitHub](https://github.com/dgonschorek) and [LinkedIn](https://www.linkedin.com/in/dominic-gonschorek).

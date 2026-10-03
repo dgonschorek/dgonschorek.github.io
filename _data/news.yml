@@ -1,0 +1,46 @@
+# News items, newest first. The home page shows the first few; /news/ shows all.
+# `date` only needs month precision (the day is not displayed).
+# `text` is Markdown.
+
+- date: 2026-08-01
+  text: >-
+    Our All-GCL dataset paper is out in *Scientific Data*: two-photon recordings from more than
+    80,000 neurons in the mouse ganglion cell layer, with standardized metadata, pretrained
+    cell-type classifiers, tutorials and analysis code.
+    [Paper](/publication/2025-12-09_A_large-scale_dataset) ·
+    [Code](https://github.com/eulerlab/all-GCL-manuscript) ·
+    [Dataset](https://huggingface.co/datasets/eulerlab/all-gcl)
+
+- date: 2026-07-01
+  text: >-
+    [The openretina Project](/publication/2025-03-11_The_openretina_Project) is now an eLife
+    Reviewed Preprint. openretina is an open-source Python package for training, evaluating and
+    comparing deep learning models of the retina across datasets and species.
+    [Code](https://github.com/open-retina/open-retina)
+
+- date: 2026-06-01
+  text: >-
+    New preprint: [Eyewire II](/publication/2026-06-01_Eyewire_II-A_connectomic), a connectomic
+    resource for the mouse retina that combines large-scale electron microscopy reconstructions with
+    functional recordings to resolve retinal cell types and circuits.
+
+- date: 2026-05-01
+  text: >-
+    New preprint: [On-Off coding is latent in vertebrate visual circuits](/publication/2026-05-05_On-Off_coding_is).
+    We show that the separation of On and Off signals is not a fixed circuit property but is
+    shaped by inhibition and sensory context across the visual system.
+
+- date: 2026-05-01
+  text: >-
+    [TRACE](/publication/2026-04-23_TRACE_Contrastive_learning), our NeurIPS 2025 paper, is now in the
+    proceedings. TRACE is a self-supervised contrastive learning method that uses repeated
+    stimulus trials to learn representations of large-scale neural recordings.
+
+- date: 2026-04-01
+  text: >-
+    New preprint on [the functional organization of retinal input to the mouse superior colliculus](/publication/2026-04-15_The_functional_organization).
+    Combining large-scale *in vivo* imaging with deep learning, we find that nearly the full
+    diversity of retinal ganglion cell types reaches the colliculus, organized in systematic
+    functional gradients.
+    [Code](https://github.com/yongrong-qiu/retina-axon-model) ·
+    [Colab](https://colab.research.google.com/drive/1k9411tLWNcDlUX7nYDsU_grMwafiI3qw?usp=sharing)

@@ -1,0 +1,16 @@
+{%- comment -%}
+  Links for a publication. Params: pub, style ("buttons" or inline default)
+{%- endcomment -%}
+{%- assign p = include.pub -%}
+{%- if p.paperurl or p.pdf or p.doi or p.preprint or p.code or p.data or p.colab or p.project -%}
+<ul class="pub__links{% if include.style == 'buttons' %} pub__links--buttons{% endif %}" aria-label="Links for this publication">
+  {%- if p.paperurl -%}<li><a href="{{ p.paperurl }}"><i class="fas fa-file-lines" aria-hidden="true"></i>{% if p.category == "preprints" %}Preprint{% else %}Article{% endif %}</a></li>{%- endif -%}
+  {%- if p.pdf -%}<li><a href="{{ p.pdf }}"><i class="fas fa-file-pdf" aria-hidden="true"></i>PDF</a></li>{%- endif -%}
+  {%- if p.preprint -%}<li><a href="{{ p.preprint }}"><i class="fas fa-file-pen" aria-hidden="true"></i>Preprint</a></li>{%- endif -%}
+  {%- if p.code -%}<li><a href="{{ p.code }}"><i class="fab fa-github" aria-hidden="true"></i>Code</a></li>{%- endif -%}
+  {%- if p.data -%}<li><a href="{{ p.data }}"><i class="fas fa-database" aria-hidden="true"></i>Data</a></li>{%- endif -%}
+  {%- if p.colab -%}<li><a href="{{ p.colab }}"><i class="fas fa-laptop-code" aria-hidden="true"></i>Colab</a></li>{%- endif -%}
+  {%- if p.project -%}<li><a href="{{ p.project }}"><i class="fas fa-diagram-project" aria-hidden="true"></i>Project</a></li>{%- endif -%}
+  {%- if p.doi -%}<li><a href="https://doi.org/{{ p.doi }}" class="pub__doi"><span>DOI</span>&nbsp;{{ p.doi }}</a></li>{%- endif -%}
+</ul>
+{%- endif -%}

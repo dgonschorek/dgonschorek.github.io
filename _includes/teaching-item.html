@@ -1,0 +1,17 @@
+{% assign c = include.item %}
+<li class="entry">
+  <div class="entry__date">{{ c.start }}{% if c.end != c.start %}–{% if c.end == "present" %}<span class="entry__present">present</span>{% else %}{{ c.end }}{% endif %}{% endif %}</div>
+  <div class="entry__body">
+    <h3 class="entry__title">{{ c.title }}</h3>
+    <p class="entry__meta">
+      <span class="tag">{{ c.role }}</span>
+      {{ c.institution }}{% if c.level and c.level != "" %} <span class="pub__sep" aria-hidden="true">·</span> {{ c.level }}{% endif %}
+    </p>
+    <div class="entry__text">{{ c.content | markdownify }}</div>
+    {% if c.activities.size > 0 %}
+      <ul class="keywords" aria-label="Activities">
+        {% for a in c.activities %}<li>{{ a }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</li>

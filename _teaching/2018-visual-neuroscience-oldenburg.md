@@ -1,10 +1,12 @@
 ---
 title: "Visual Neuroscience"
 collection: teaching
-type: "Student Teaching Assistant (Master)"
-permalink: /teaching/2018-visual-neuroscience-oldenburg
-venue: "Department of Neuroscience, Carl-von-Ossietzky University of Oldenburg"
-date: 2018-01-01
-location: "Oldenburg, Germany"
+category: course
+role: "Student teaching assistant"
+institution: "Department of Neuroscience, Carl von Ossietzky University of Oldenburg"
+level: "Master's students"
+start: 2018
+end: 2018
+activities: ["Lab experiments", "Practical tutorials"]
 ---
-Assisting experiments and practical tutorials.
+Assisted students with laboratory experiments and practical tutorials.

@@ -1,166 +1,91 @@
-# Welcome to Jekyll!
+# Site configuration for dominic-gonschorek.com
 #
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# This file is *NOT* reloaded automatically when you use `jekyll serve`.
+# Restart the server process after changing it.
 
-# Basic Site Settings
+# Basic site settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default"
 title                    : "Dominic Gonschorek"
-title_separator          : "-"
+title_separator          : "·"
 name                     : &name "Dominic Gonschorek"
-description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
-url                      : https://dominic-gonschorek.com # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+description              : &description "Dominic Gonschorek is a computational and systems neuroscientist in Tübingen, Germany, who combines large-scale recordings of visual circuits with machine learning and open, reusable datasets."
+url                      : https://dominic-gonschorek.com
+baseurl                  : ""
+repository               : "dgonschorek/dgonschorek.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Site author - shown in the sidebar profile (see _includes/author-profile.html).
+# Fields left blank are not shown.
 author:
-  # Biographic information
   avatar           : "dominic.jpg"
+  avatar_alt       : "Portrait of Dominic Gonschorek"
   name             : "Dominic Gonschorek"
-  pronouns         : # example: "she/her"  
-  bio              : "Postdoctoral Researcher"
+  pronouns         :
+  # Professional descriptor (what I do) ...
+  bio              : "Computational & Systems Neuroscientist"
+  # ... and current position (where I do it)
+  position         : "Postdoctoral Researcher"
+  group            : "Euler Lab"
+  group_url        : "https://eulerlab.de/"
+  employer         : "University of Tübingen"   # TODO: confirm preferred affiliation (CV lists "University Hospital Tübingen, Centre for Integrative Neuroscience")
   location         : "Tübingen, Germany"
-  employer         : "University of Tübingen"
-  uri              : # URL
   email            : "dominic.gonschorek@cin.uni-tuebingen.de"
+  cv               : "/files/CV_DG.pdf"
 
-  # Academic websites
-  academia         : # URL
-  arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.de/citations?user=1HUhiwoAAAAJ&hl=de&oi=ao"
-  inspire-hep      : # URL
-  impactstory      : # URL
+  # Academic profiles
+  googlescholar    : "https://scholar.google.de/citations?user=1HUhiwoAAAAJ"
   orcid            : "https://orcid.org/0000-0001-5118-9817"
-  semantic         : # URL
-  ssrn             : # URL
-  pubmed           : #
-  researchgate     : # URL
-  scopus           : # URL
-  zotero           : # URL
+  researchgate     :
+  semantic         :
 
-
-  # Repositories and software development
-  bitbucket        : # Username - Update with your username on the site
-  codepen          : # Username
-  dribbble         : # Username
+  # Code
   github           : "dgonschorek"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
-  # Social media
-  artstation       : # Username
-  bluesky          : "dgonschorek.bsky.social" # Replace this with you Bluesky username
-  facebook         : # Username
-  flickr           : # Username
-  foursquare       : # Username
-  goodreads        : # Username
-  google_plus      : # Username
-  keybase          : # Username
-  instagram        : # Username
-  lastfm           : # Username
-  linkedin         : "dominic-gonschorek"# Username
-  mastodon         : # URL
-  medium           : # URL
-  pinterest        : # Username
-  soundcloud       : # Username
-  steam            : # Username
-  telegram         : # URL
-  tumblr           : # Username
-  twitter          : # Username for X / Twitter
-  vine             : # Username
-  weibo            : # Username
-  wikipedia        : # Username
-  xing             : # Username
-  youtube          : # Username
-  zhihu            : # Username
+  # Social
+  linkedin         : "dominic-gonschorek"
+  bluesky          : "dgonschorek.bsky.social"
 
-# Publication Category - The following the list of publication categories and their headings
+# Publication categories, in the order they appear on /publications/
 publication_category:
-  preprints:
-    title: 'Preprints'
   manuscripts:
-    title: 'Journal Articles'
+    title: "Journal articles"
   conferences:
-    title: 'Conference Proceedings'
+    title: "Conference papers"
+  preprints:
+    title: "Preprints"
 
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
-breadcrumbs              : false # true, false (default)
+# Site settings
+breadcrumbs              : false
 words_per_minute         : 160
 future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
+read_more                : "disabled"
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  provider               : false
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+  hide                   : true
 
-
-# SEO Related
+# SEO and social sharing
+og_image                 : "dominic.jpg"   # in /images/
+og_image_alt             : "Portrait of Dominic Gonschorek"
+twitter:
+  username               :
+social:
+  type                   : Person
+  name                   : *name
+  links:
+    - "https://scholar.google.de/citations?user=1HUhiwoAAAAJ"
+    - "https://orcid.org/0000-0001-5118-9817"
+    - "https://github.com/dgonschorek"
+    - "https://www.linkedin.com/in/dominic-gonschorek"
+    - "https://bsky.app/profile/dgonschorek.bsky.social"
 google_site_verification :
 bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
 
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-
-# Analytics
+# Analytics (none)
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
+  provider               : false
 
-
-# Reading Files
+# Reading files
 include:
   - .htaccess
   - _pages
@@ -170,34 +95,36 @@ exclude:
   - "*.sublime-workspace"
   - .asset-cache
   - .bundle
+  - .devcontainer
   - .github
+  - .idea
   - .jekyll-assets-cache
   - .sass-cache
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
   - CHANGELOG
-  - Capfile
   - config
+  - docker-compose.yaml
   - Dockerfile
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
+  - Gemfile.lock
   - LICENSE
   - local
   - log
+  - markdown_generator
   - node_modules
-  - package.json*
-  - Rakefile
-  - README
+  - package.json
+  - package-lock.json
+  - README.md
   - tmp
   - vendor
+  - _config_docker.yml
 keep_files:
   - .git
   - .svn
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
 
 # Conversion
 markdown: kramdown
@@ -206,8 +133,6 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -218,26 +143,31 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
-# These settings control the types of collections used by the template
+# Collections
+#  - publications: one page per paper (abstract, links, citation)
+#  - talks, teaching: listed in full on /talks/ and /teaching/, no individual pages
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
   talks:
-    output: true
-    permalink: /:collection/:path/
+    output: false
+  teaching:
+    output: false
 
-
-# These settings control how pages and collections are included in the site
 defaults:
-  # _posts
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+      author_profile: true
   - scope:
       path: ""
       type: posts
@@ -245,116 +175,37 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
-
-# Sass/SCSS
+# Sass
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
+  style: compressed
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Berlin
 
-
-# Plugins
+# Plugins (all supported by GitHub Pages)
 plugins:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
-# Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
   - jemoji
 
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
-
-# HTML Compression
-# - https://jch.penibelst.de/
+# HTML compression
 compress_html:
   clippings: all
   ignore:

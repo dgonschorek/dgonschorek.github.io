@@ -2,35 +2,37 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
+description: "Publications of Dominic Gonschorek: journal articles, NeurIPS papers and preprints on retinal computation, neuromodulation, machine learning for neuroscience and large-scale neural datasets."
+lead: "Journal articles, conference papers and preprints, newest first. Each entry links to the article and, where available, the preprint, code and data."
 author_profile: true
+page_class: publications
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+<p class="page__intro-meta">
+  <span><span class="me">Gonschorek, D.</span> highlighted</span>
+  <span><sup>*</sup> shared first</span>
+  <span><sup>+</sup> shared second</span>
+  <span><sup>§</sup> shared senior authorship</span>
+  {% if site.author.googlescholar %}<span>Full list on <a href="{{ site.author.googlescholar }}">Google Scholar</a></span>{% endif %}
+</p>
+
+<nav class="toc-inline" aria-label="Publication types">
+  {% for category in site.publication_category %}
+    <a href="#{{ category[0] }}">{{ category[1].title }}</a>
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+</nav>
 
-
-
+{% assign all_pubs = site.publications | sort: "date" | reverse %}
+{% for category in site.publication_category %}
+  {% assign pubs = all_pubs | where: "category", category[0] %}
+  {% if pubs.size > 0 %}
+    <section class="pub-section" id="{{ category[0] }}">
+      <h2 class="archive__subtitle">{{ category[1].title }} <span class="count">{{ pubs.size }}</span></h2>
+      <ol class="pub-list">
+        {% for p in pubs %}{% include publication-item.html pub=p %}{% endfor %}
+      </ol>
+    </section>
+  {% endif %}
+{% endfor %}

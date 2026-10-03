@@ -1,0 +1,12 @@
+{%- comment -%} Publications tagged with a research theme. Params: theme {%- endcomment -%}
+{%- assign theme_pubs = site.publications | where_exp: "p", "p.themes contains include.theme" | sort: "date" | reverse -%}
+{%- if theme_pubs.size > 0 -%}
+<div class="related-wrap">
+<details class="related">
+  <summary>Related publications ({{ theme_pubs.size }})</summary>
+  <ol class="pub-list pub-list--compact">
+    {% for p in theme_pubs %}{% include publication-item.html pub=p %}{% endfor %}
+  </ol>
+</details>
+</div>
+{%- endif -%}

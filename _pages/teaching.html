@@ -1,12 +1,24 @@
 ---
 layout: archive
-title: "Teaching"
+title: "Teaching & mentoring"
 permalink: /teaching/
+description: "Teaching by Dominic Gonschorek: Python programming, scientific writing and retinal neuroscience courses at the Graduate Training Centre of Neuroscience, University of Tübingen, plus student mentoring and outreach."
+lead: "I teach programming, quantitative data analysis and scientific writing to Master's and PhD students at the Graduate Training Centre of Neuroscience in Tübingen, and I mentor students in the lab."
 author_profile: true
+page_class: teaching
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+{% assign groups = "course|University courses,mentoring|Mentoring & supervision,outreach|Outreach & service" | split: "," %}
+{% for g in groups %}
+  {% assign key = g | split: "|" | first %}
+  {% assign label = g | split: "|" | last %}
+  {% assign items = site.teaching | where: "category", key | sort: "start" | reverse %}
+  {% if items.size > 0 %}
+    <section class="year-group">
+      <h2 class="archive__subtitle">{{ label }}</h2>
+      <ol class="entry-list">
+        {% for c in items %}{% include teaching-item.html item=c %}{% endfor %}
+      </ol>
+    </section>
+  {% endif %}
 {% endfor %}

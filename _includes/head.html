@@ -1,16 +1,20 @@
 {% include base_path %}
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% include seo.html %}
 
-<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  /* Mark JS as available and apply a saved light-theme preference before first paint
+     (the site defaults to dark, see _layouts/default.html). */
+  (function () {
+    var root = document.documentElement;
+    root.className = root.className.replace(/\bno-js\b/g, '') + ' js';
+    try {
+      if (localStorage.getItem('theme') === 'light') { root.removeAttribute('data-theme'); }
+    } catch (e) {}
+  })();
 </script>
 
-<!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">

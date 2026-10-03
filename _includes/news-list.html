@@ -1,0 +1,10 @@
+{%- comment -%} News items from _data/news.yml. Params: limit (optional) {%- endcomment -%}
+{% assign limit = include.limit | default: site.data.news.size %}
+<ul class="news">
+  {% for item in site.data.news limit: limit %}
+    <li class="news__item">
+      <time class="news__date" datetime="{{ item.date | date: '%Y-%m' }}">{{ item.date | date: "%b %Y" }}</time>
+      <div class="news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+    </li>
+  {% endfor %}
+</ul>

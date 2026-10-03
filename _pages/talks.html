@@ -1,16 +1,25 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks"
 permalink: /talks/
+description: "Invited and conference talks by Dominic Gonschorek on retinal neuromodulation, large-scale retinal datasets and machine learning for systems neuroscience."
+lead: "Invited and conference talks, newest first."
 author_profile: true
+page_class: talks
 ---
 
-{% if site.talkmap_link == true %}
-
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
+{% assign talks = site.talks | sort: "date" | reverse %}
+{% assign years = talks | group_by_exp: "t", "t.date | date: '%Y'" %}
+{% for year in years %}
+  <section class="year-group">
+    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <ol class="entry-list">
+      {% for t in year.items %}{% include talk-item.html talk=t %}{% endfor %}
+    </ol>
+  </section>
 {% endfor %}
+
+{% comment %}
+  TODO: add conference posters (title, meeting, date, location) as entries in _talks/
+  with type: "Poster" if you would like them listed here.
+{% endcomment %}

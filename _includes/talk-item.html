@@ -1,0 +1,20 @@
+{% include base_path %}
+{% assign t = include.talk %}
+<li class="entry">
+  <div class="entry__date"><time datetime="{{ t.date | date: '%Y-%m' }}">{{ t.date | date: "%b %Y" }}</time></div>
+  <div class="entry__body">
+    <h3 class="entry__title">{{ t.title }}</h3>
+    <p class="entry__meta">
+      <span class="tag">{{ t.type }}</span>
+      {{ t.event }}{% if t.location %} <span class="pub__sep" aria-hidden="true">·</span> {{ t.location }}{% endif %}
+    </p>
+    {% if t.note %}<p class="entry__note">{{ t.note }}</p>{% endif %}
+    {% if t.publication or t.slides or t.recording %}
+      <ul class="pub__links">
+        {% if t.publication %}{% assign related = site.publications | where: "permalink", t.publication | first %}<li><a href="{{ base_path }}{{ t.publication }}" {% if related %}title="{{ related.title | escape }}"{% endif %}><i class="fas fa-file-lines" aria-hidden="true"></i>Related publication</a></li>{% endif %}
+        {% if t.slides %}<li><a href="{{ t.slides }}"><i class="fas fa-person-chalkboard" aria-hidden="true"></i>Slides</a></li>{% endif %}
+        {% if t.recording %}<li><a href="{{ t.recording }}"><i class="fas fa-video" aria-hidden="true"></i>Recording</a></li>{% endif %}
+      </ul>
+    {% endif %}
+  </div>
+</li>

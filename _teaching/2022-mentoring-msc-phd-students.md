@@ -1,10 +1,13 @@
 ---
-title: "Mentoring of MSc and PhD students"
+title: "Mentoring of Master's and PhD students"
 collection: teaching
-type: "Mentoring, 2022 - Present"
-permalink: /teaching/2022-mentoring-msc-phd-students
-venue: "Eulerlab, University Hospital Tübingen"
-date: 2022-01-01
-location: "Tübingen, Germany"
+category: mentoring
+role: "Mentor"
+institution: "Euler Lab, University of Tübingen"
+level: "Master's and PhD students"
+start: 2022
+end: "present"
+activities: ["Programming", "Project management", "Quantitative data analysis"]
+# TODO: number of students mentored, thesis/project titles (with permission), and whether you were formal (co-)supervisor
 ---
-Mentored MSc and PhD students in programming, project management, and quantitative data analysis.
+Mentoring of Master's and PhD students in the lab in programming, project management and quantitative data analysis.

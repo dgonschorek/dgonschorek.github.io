@@ -1,0 +1,8 @@
+{%- assign all = include.authors | join: " " -%}
+{%- if all contains "*" or all contains "+" or all contains "§" -%}
+<p class="pub__legend">
+  {%- if all contains "*" -%}<span><sup>*</sup> shared first authorship</span>{%- endif -%}
+  {%- if all contains "+" -%}<span><sup>+</sup> shared second authorship</span>{%- endif -%}
+  {%- if all contains "§" -%}<span><sup>§</sup> shared senior authorship</span>{%- endif -%}
+</p>
+{%- endif -%}

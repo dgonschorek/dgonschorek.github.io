@@ -1,10 +1,12 @@
 ---
 title: "Neurobiology"
 collection: teaching
-type: "Student Teaching Assistant (Bachelor)"
-permalink: /teaching/2017-neurobiology-oldenburg
-venue: "Department of Neuroscience, Carl-von-Ossietzky University of Oldenburg"
-date: 2017-01-01
-location: "Oldenburg, Germany"
+category: course
+role: "Student teaching assistant"
+institution: "Department of Neuroscience, Carl von Ossietzky University of Oldenburg"
+level: "Bachelor's students"
+start: 2017
+end: 2017
+activities: ["Lab experiments", "Practical tutorials"]
 ---
-Assisting experiments and practical tutorials.
+Assisted students with laboratory experiments and practical tutorials.
