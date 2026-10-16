@@ -92,6 +92,7 @@ redirect_from:
 <section class="cv-section">
   <h2 class="archive__subtitle">Awards & grants</h2>
   <ul class="cv-list">
+    <li><span class="cv-list__year">2026</span> FASEB travel grant for a poster presentation</li>
     <li><span class="cv-list__year">2024</span> FASEB travel grant for an invited talk</li>
     <li><span class="cv-list__year">2021</span> Spotlight presentation, NeurIPS 2021</li>
     <li><span class="cv-list__year">2018</span> DAAD scholarship "Go East"</li>

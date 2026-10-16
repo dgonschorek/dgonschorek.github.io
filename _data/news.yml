@@ -2,6 +2,16 @@
 # `date` only needs month precision (the day is not displayed).
 # `text` is Markdown.
 
+- date: 2026-10-01
+  text: >-
+    Our paper on [the functional organization of retinal input to the mouse superior colliculus](/publication/2026-04-15_The_functional_organization)
+    has been accepted in *Current Biology*. Imaging more than 200,000 retinal ganglion cell axon
+    boutons *in vivo* and combining the data with deep learning models, we find that nearly the full
+    diversity of retinal ganglion cell types reaches the colliculus, organized in systematic
+    functional gradients.
+    [Preprint](https://doi.org/10.64898/2026.04.15.718783) ·
+    [Code](https://github.com/yongrong-qiu/retina-axon-model)
+
 - date: 2026-08-01
   text: >-
     Our All-GCL dataset paper is out in *Scientific Data*: two-photon recordings from more than
@@ -17,6 +27,12 @@
     Reviewed Preprint. openretina is an open-source Python package for training, evaluating and
     comparing deep learning models of the retina across datasets and species.
     [Code](https://github.com/open-retina/open-retina)
+
+- date: 2026-06-01
+  text: >-
+    Presented a poster on our [superior colliculus project](/publication/2026-04-15_The_functional_organization)
+    at the FASEB Retinal Neurobiology and Visual Processing Conference in Sacramento, California,
+    supported by a FASEB travel grant.
 
 - date: 2026-06-01
   text: >-
