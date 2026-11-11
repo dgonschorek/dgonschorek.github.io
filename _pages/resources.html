@@ -1,0 +1,26 @@
+---
+layout: archive
+title: "Resources"
+permalink: /resources/
+description: "Public code and datasets from Dominic Gonschorek's research and collaborations: Neuro-RAVE, openretina, All-GCL, Eyewire II and more."
+lead: "Code and datasets from my research and collaborations, collected for reuse. Most are shared projects; each entry names the lab or team behind it and links to the related paper. For the scientific context, see [Research](/research/)."
+author_profile: true
+page_class: resources
+---
+
+{%- comment -%} Entries live in _data/resources.yml {%- endcomment -%}
+
+<nav class="toc-inline" aria-label="Resource types">
+  {% for section in site.data.resources %}
+    <a href="#{{ section.id }}">{{ section.title }}</a>
+  {% endfor %}
+</nav>
+
+{% for section in site.data.resources %}
+  <section class="resource-section" id="{{ section.id }}">
+    <h2 class="archive__subtitle">{{ section.title }} <span class="count">{{ section.items.size }}</span></h2>
+    <ol class="entry-list">
+      {% for item in section.items %}{% include resource-item.html item=item %}{% endfor %}
+    </ol>
+  </section>
+{% endfor %}

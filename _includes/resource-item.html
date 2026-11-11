@@ -1,0 +1,31 @@
+{%- comment -%}
+  One entry on the Resources page (data in _data/resources.yml). Params: item
+{%- endcomment -%}
+{% include base_path %}
+{% assign r = include.item %}
+<li class="entry" id="{{ r.id }}">
+  <div class="entry__kind">{{ r.kind }}</div>
+  <div class="entry__body">
+    <h3 class="entry__title">{{ r.name }}</h3>
+    {% if r.credit %}<p class="entry__meta">{{ r.credit | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>{% endif %}
+    <div class="entry__text">{{ r.description | markdownify }}</div>
+    {% if r.links %}
+      <ul class="pub__links" aria-label="Links for {{ r.name | escape }}">
+        {% for l in r.links %}
+          {%- case l.icon -%}
+            {%- when "github" -%}{%- assign icon = "fab fa-github" -%}
+            {%- when "docs" -%}{%- assign icon = "fas fa-book" -%}
+            {%- when "tutorial" -%}{%- assign icon = "fas fa-book-open" -%}
+            {%- when "colab" -%}{%- assign icon = "fas fa-laptop-code" -%}
+            {%- when "data" -%}{%- assign icon = "fas fa-database" -%}
+            {%- when "paper" -%}{%- assign icon = "fas fa-file-lines" -%}
+            {%- when "project" -%}{%- assign icon = "fas fa-globe" -%}
+            {%- else -%}{%- assign icon = "fas fa-link" -%}
+          {%- endcase -%}
+          {%- assign first_char = l.url | slice: 0 -%}
+          <li><a href="{% if first_char == '/' %}{{ base_path }}{% endif %}{{ l.url }}"><i class="{{ icon }}" aria-hidden="true"></i>{{ l.label }}</a></li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</li>

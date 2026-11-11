@@ -2,6 +2,15 @@
 # `date` only needs month precision (the day is not displayed).
 # `text` is Markdown.
 
+- date: 2026-11-01
+  text: >-
+    Neuro-RAVE is now publicly available: a PyTorch package for reducing inter-experimental
+    variability (batch effects) in neuroscientific time-series data. It provides RAVE and RAVE+,
+    the unsupervised and semi-supervised methods introduced in our NeurIPS 2021 paper,
+    “Removing Inter-Experimental Variability from Functional Data in Systems Neuroscience.”
+    [GitHub](https://github.com/dgonschorek/neuro_rave) ·
+    [Original paper](https://proceedings.neurips.cc/paper_files/paper/2021/hash/1e5eeb40a3fce716b244599862fd2200-Abstract.html)
+
 - date: 2026-10-01
   text: >-
     Our paper on [the functional organization of retinal input to the mouse superior colliculus](/publication/2026-04-15_The_functional_organization)

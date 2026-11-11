@@ -14,6 +14,7 @@ Built with Jekyll on GitHub Pages, based on [Academic Pages](https://academicpag
 | Home page | `_pages/about.md` |
 | News items (home page + `/news/`) | `_data/news.yml` |
 | Research page | `_pages/research.md` |
+| Resources page (code & datasets) | `_data/resources.yml` (entries), `_pages/resources.html` |
 | Publications (one file per paper) | `_publications/` |
 | Talks | `_talks/` |
 | Teaching, mentoring, outreach | `_teaching/` |

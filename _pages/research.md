@@ -54,6 +54,7 @@ My work combines two-photon imaging and multi-electrode recordings with computat
 **Question.** Modern recordings are large, high-dimensional and noisy, and they come from many experiments. How do we extract structure from them that holds up and can be interpreted biologically?
 
 - **Integrating data across experiments.** An adversarial domain-adaptation approach removes inter-experimental variability from two-photon imaging data while preserving the biological signal (NeurIPS 2021, spotlight).
+  [Neuro-RAVE package](https://github.com/dgonschorek/neuro_rave) · [Original code](https://github.com/eulerlab/rave)
 - **Predicting neural responses.** Adding an efficient-coding objective based on natural scene statistics to system-identification models improves predictions of retinal responses (*PLOS Computational Biology*, 2023).
 - **Representation learning.** TRACE is a self-supervised contrastive method that uses repeated stimulus trials to learn low-dimensional embeddings of neural time series. These embeddings capture continuous variation and cell-type structure (NeurIPS 2025).
 - **Shared models and benchmarks.** openretina provides a common framework for training and comparing deep learning models of the retina across datasets and species. Its benchmarks show that current models still leave substantial explainable variance uncaptured.
@@ -72,6 +73,8 @@ My computational background goes back to my Master's in Neuroscience, including 
   [Paper](/publication/2025-03-11_The_openretina_Project) · [Code on GitHub](https://github.com/open-retina/open-retina)
 - **Eyewire II.** A connectomic resource of the mouse retina, reconstructed with the citizen-science platform Eyewire II.
   [Preprint](/publication/2026-06-01_Eyewire_II-A_connectomic)
+
+All public code and datasets are listed on the [Resources](/resources/) page.
 
 {% include research-pubs.html theme="data" %}
 

@@ -1,0 +1,247 @@
+# Public code and datasets, shown on /resources/ (see _pages/resources.md).
+#
+# Each section has an `id` (used as the anchor), a `title` and a list of `items`.
+# Item fields:
+#   id          anchor for linking to the entry, e.g. /resources/#neuro-rave
+#   name        display name
+#   kind        short label shown next to the entry (Package, Code, Dataset)
+#   credit      who is behind it, and the related paper (Markdown)
+#   description one or two sentences on what it contains and what it is useful for (Markdown)
+#   links       list of {label, url, icon}; icon is one of
+#               github, docs, tutorial, colab, data, paper, project
+#               URLs starting with "/" are internal pages.
+
+- id: software
+  title: "Software & code"
+  items:
+    - id: neuro-rave
+      name: "Neuro-RAVE"
+      kind: "Package"
+      credit: "Dominic Gonschorek · methods from Gonschorek, Höfling et al., NeurIPS 2021"
+      description: >-
+        PyTorch package for reducing inter-experimental variability (batch effects) in aligned,
+        fixed-length time-series data. Implements RAVE (unsupervised) and RAVE+ (semi-supervised) and
+        includes a quickstart notebook on synthetic data. First release v0.1.0 (November 2026),
+        installed from GitHub.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/dgonschorek/neuro_rave" }
+        - { label: "Tutorial", icon: tutorial, url: "https://github.com/dgonschorek/neuro_rave/blob/main/examples/quickstart.ipynb" }
+        - { label: "Paper", icon: paper, url: "/publication/2021-12-06_Removing_inter-experimental_variability" }
+
+    - id: rave-original
+      name: "RAVE: original research code"
+      kind: "Code"
+      credit: "Euler Lab · Gonschorek, Höfling et al., NeurIPS 2021"
+      description: >-
+        The research implementation used for the NeurIPS 2021 paper, with notebooks that reproduce its
+        figures from the accompanying bipolar cell dataset. To apply RAVE or RAVE+ to new data, use
+        [Neuro-RAVE](#neuro-rave).
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/rave" }
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.5iije0" }
+        - { label: "Paper", icon: paper, url: "/publication/2021-12-06_Removing_inter-experimental_variability" }
+
+    - id: openretina
+      name: "openretina"
+      kind: "Package"
+      credit: "openretina project (D'Agostino, Zenkel et al.); I am a contributing author"
+      description: >-
+        Open-source PyTorch package for training, evaluating and comparing deep learning models of the
+        retina. Provides a shared core-and-readout architecture, a reproducible training pipeline, data
+        loaders and pretrained models for public retina datasets from several species.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/open-retina/open-retina" }
+        - { label: "Documentation", icon: docs, url: "https://open-retina.org" }
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/open-retina/open-retina" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-03-11_The_openretina_Project" }
+
+    - id: all-gcl-code
+      name: "All-GCL code"
+      kind: "Code"
+      credit: "Euler Lab · Gonschorek, Oesterle, Zenkel, D'Agostino et al., *Scientific Data* 2026"
+      description: >-
+        Loads the All-GCL dataset, reproduces the paper's main figures, and includes a tutorial
+        notebook for plotting response traces with their stimulus triggers.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/all-GCL-manuscript" }
+        - { label: "Tutorial", icon: tutorial, url: "https://github.com/eulerlab/all-GCL-manuscript/blob/main/notebooks/tutorials/plot_traces_and_triggers.ipynb" }
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/eulerlab/all-gcl" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-12-09_A_large-scale_dataset" }
+
+    - id: gcl-classifier
+      name: "GCL classifier"
+      kind: "Package"
+      credit: "Euler Lab"
+      description: >-
+        Assigns mouse ganglion cell layer neurons to functional types (following Baden et al., 2016)
+        from their chirp and moving-bar responses. The pretrained model downloads from Hugging Face on
+        first use. Used for All-GCL and earlier Euler Lab studies.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/gcl_classifier" }
+
+    - id: sc-digital-twin
+      name: "Superior colliculus digital twin"
+      kind: "Code"
+      credit: "Repository by Yongrong Qiu · Qiu, Schmors, Zhou, Gonschorek et al., *Current Biology* (in press)"
+      description: >-
+        A trained deep network (“digital twin”) that predicts responses of retinal ganglion cell axon
+        terminals in the mouse superior colliculus, with analysis notebooks organized by figure. The
+        Colab notebook runs the model in the browser without local setup.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/yongrong-qiu/retina-axon-model" }
+        - { label: "Colab", icon: colab, url: "https://colab.research.google.com/drive/1k9411tLWNcDlUX7nYDsU_grMwafiI3qw?usp=sharing" }
+        - { label: "Training data", icon: data, url: "https://huggingface.co/datasets/open-retina/open-retina/tree/main/franke_lab/qiu_2026" }
+        - { label: "Paper", icon: paper, url: "/publication/2026-04-15_The_functional_organization" }
+
+    - id: trace
+      name: "TRACE"
+      kind: "Code"
+      credit: "Berens Lab · Schmors et al., NeurIPS 2025"
+      description: >-
+        Contrastive learning framework that builds positive pairs by averaging different subsets of
+        repeated trials, producing 2D embeddings of multi-trial neural time series. A companion
+        repository reproduces the paper's figures.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/berenslab/TRACE" }
+        - { label: "Figure code", icon: github, url: "https://github.com/berenslab/TRACE_experiments" }
+        - { label: "Paper", icon: paper, url: "/publication/2026-04-23_TRACE_Contrastive_learning" }
+
+    - id: hybrid-model
+      name: "Efficient-coding hybrid model"
+      kind: "Code"
+      credit: "Euler Lab · Qiu et al., *PLOS Computational Biology* 2023"
+      description: >-
+        Scripts and notebooks for system-identification models of retinal responses that add an
+        efficient-coding objective based on natural scene statistics.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/hybrid-model" }
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.5281/zenodo.7656868" }
+        - { label: "Paper", icon: paper, url: "/publication/2023-04-24_Efficient_coding_of" }
+
+    - id: nitric-oxide-code
+      name: "Nitric oxide analysis code"
+      kind: "Code"
+      credit: "Euler Lab · Gonschorek et al., *eLife* 2025"
+      description: >-
+        Analysis code for the two-photon Ca²⁺ imaging and multi-electrode array datasets, to reproduce
+        the paper's analyses and figure panels.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/nitric_oxide_rgc_eLife" }
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.mpf63w" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-01-09_Nitric_oxide_modulates" }
+
+    - id: rd10-code
+      name: "rd10 analysis code"
+      kind: "Code"
+      credit: "Euler Lab · Dyszkant et al., *J Physiol* 2025"
+      description: >-
+        Jupyter notebooks that reproduce the analyses and figures on how photoreceptor degeneration in
+        rd10 mice affects functional retinal ganglion cell types.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eulerlab/rd10_rgc" }
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.89z5px" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-11-01_Photoreceptor_degeneration_has" }
+
+    - id: eyewire2-code
+      name: "Eyewire II code"
+      kind: "Code"
+      credit: "Eyewire II Consortium"
+      description: >-
+        Tools for the two-photon functional recordings in the Eyewire II dataset (tutorial scripts, an
+        interactive EM ↔ function explorer and 2P-to-EM registration), plus a separate repository that
+        reproduces the resource paper's figures.
+      links:
+        - { label: "GitHub", icon: github, url: "https://github.com/eyewire2/eyewire2-functional-analysis" }
+        - { label: "Figure code", icon: github, url: "https://github.com/eyewire2/eyewire2-figures" }
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/eulerlab/eyewire2-data" }
+        - { label: "Preprint", icon: paper, url: "/publication/2026-06-01_Eyewire_II-A_connectomic" }
+
+- id: datasets
+  title: "Datasets"
+  items:
+    - id: all-gcl
+      name: "All-GCL"
+      kind: "Dataset"
+      credit: "Euler Lab · Hugging Face · CC BY 4.0"
+      description: >-
+        Two-photon Ca²⁺ recordings from more than 80,000 neurons in the mouse ganglion cell layer, in
+        NWB format, with standardized metadata and functional type assignments. Useful for population
+        analyses, cell-type classification and model training.
+      links:
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/eulerlab/all-gcl" }
+        - { label: "Code", icon: github, url: "https://github.com/eulerlab/all-GCL-manuscript" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-12-09_A_large-scale_dataset" }
+
+    - id: rave-data
+      name: "Bipolar cell chirp responses (RAVE)"
+      kind: "Dataset"
+      credit: "Gonschorek, Höfling et al. · G-Node · CC BY-NC-SA 4.0"
+      description: >-
+        Simulated and recorded responses of mouse retinal bipolar cells to the chirp stimulus, used to
+        develop and evaluate RAVE and RAVE+.
+      links:
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.5iije0" }
+        - { label: "Original code", icon: github, url: "https://github.com/eulerlab/rave" }
+        - { label: "Neuro-RAVE", icon: github, url: "https://github.com/dgonschorek/neuro_rave" }
+        - { label: "Paper", icon: paper, url: "/publication/2021-12-06_Removing_inter-experimental_variability" }
+
+    - id: eyewire2-data
+      name: "Eyewire II data"
+      kind: "Dataset"
+      credit: "Eyewire II Consortium · Hugging Face · CC BY-NC 4.0, under the Eyewire II Principles of Collaboration"
+      description: >-
+        Data accompanying the Eyewire II resource paper: preprocessed two-photon Ca²⁺ traces, 2P-to-EM
+        mapping tables and reconstructed neuron skeletons from the mouse retina EM volume.
+      links:
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/eulerlab/eyewire2-data" }
+        - { label: "Project", icon: project, url: "https://eyewire.ai" }
+        - { label: "Code", icon: github, url: "https://github.com/eyewire2/eyewire2-functional-analysis" }
+        - { label: "Preprint", icon: paper, url: "/publication/2026-06-01_Eyewire_II-A_connectomic" }
+
+    - id: openretina-data
+      name: "openretina datasets and checkpoints"
+      kind: "Dataset"
+      credit: "openretina project; data originally from the Baccus, Euler, Franke, Gollisch and Marre labs · Hugging Face · CC BY-SA 4.0"
+      description: >-
+        Preprocessed retina datasets from several labs in openretina's format, plus pretrained model
+        checkpoints. Includes the training data for the superior colliculus digital twin.
+      links:
+        - { label: "Dataset", icon: data, url: "https://huggingface.co/datasets/open-retina/open-retina" }
+        - { label: "Code", icon: github, url: "https://github.com/open-retina/open-retina" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-03-11_The_openretina_Project" }
+
+    - id: nitric-oxide-data
+      name: "Nitric oxide dataset"
+      kind: "Dataset"
+      credit: "Euler Lab · G-Node · CC BY-NC-SA 4.0"
+      description: >-
+        Two-photon Ca²⁺ imaging and multi-electrode array data underlying the study of nitric oxide
+        effects on mouse retinal ganglion cells.
+      links:
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.mpf63w" }
+        - { label: "Code", icon: github, url: "https://github.com/eulerlab/nitric_oxide_rgc_eLife" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-01-09_Nitric_oxide_modulates" }
+
+    - id: rd10-data
+      name: "rd10 dataset"
+      kind: "Dataset"
+      credit: "Euler Lab · G-Node · CC BY-NC-SA 4.0"
+      description: >-
+        Functional recordings of mouse retinal ganglion cells underlying the study of how early
+        photoreceptor degeneration in rd10 mice affects functional cell types.
+      links:
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.12751/g-node.89z5px" }
+        - { label: "Code", icon: github, url: "https://github.com/eulerlab/rd10_rgc" }
+        - { label: "Paper", icon: paper, url: "/publication/2025-11-01_Photoreceptor_degeneration_has" }
+
+    - id: hybrid-model-data
+      name: "Efficient-coding dataset"
+      kind: "Dataset"
+      credit: "Euler Lab · Zenodo · CC BY 4.0"
+      description: >-
+        Data accompanying Qiu et al. (2023) on hybrid system-identification models with an
+        efficient-coding objective.
+      links:
+        - { label: "Dataset", icon: data, url: "https://doi.org/10.5281/zenodo.7656868" }
+        - { label: "Code", icon: github, url: "https://github.com/eulerlab/hybrid-model" }
+        - { label: "Paper", icon: paper, url: "/publication/2023-04-24_Efficient_coding_of" }

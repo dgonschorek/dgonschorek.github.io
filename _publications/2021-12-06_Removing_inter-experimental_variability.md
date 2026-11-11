@@ -17,11 +17,12 @@ paperurl: "https://proceedings.neurips.cc/paper_files/paper/2021/file/1e5eeb40a3
 doi:
 preprint: "https://doi.org/10.1101/2021.10.29.466492"
 pdf:
-code:
-data:
+code: "https://github.com/eulerlab/rave"
+data: "https://doi.org/10.12751/g-node.5iije0"
 colab:
 project:
-# TODO: code: link to code repository, if public
 ---
 
 Integrating data from multiple experiments is common practice in systems neuroscience, but it requires inter-experimental variability to be negligible compared to the biological signal of interest. This work presents a framework using adversarial optimization to remove such inter-experimental variability, tested on two-photon imaging recordings of retinal bipolar cells.
+
+The methods are also available as a PyTorch package, [Neuro-RAVE](https://github.com/dgonschorek/neuro_rave), released in 2026.
