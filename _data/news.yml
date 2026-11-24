@@ -2,6 +2,15 @@
 # `date` only needs month precision (the day is not displayed).
 # `text` is Markdown.
 
+- date: 2026-11-23
+  text: >-
+    Launched [*On Doing Science*](https://dominicgonschorek.substack.com/), a newsletter about doing
+    research and living an academic life. Its first series, *Science in the Agentic Age*, asks what
+    part of the science is still mine when AI writes much of the analysis code. Part 1,
+    [“Did I Do the Science?”](https://dominicgonschorek.substack.com/p/did-i-do-the-science), is out now.
+    [Subscribe](https://dominicgonschorek.substack.com/subscribe) ·
+    [All posts](/blog/)
+
 - date: 2026-11-01
   text: >-
     Neuro-RAVE is now publicly available: a PyTorch package for reducing inter-experimental

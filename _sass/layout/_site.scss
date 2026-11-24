@@ -898,6 +898,35 @@ a.theme:focus-visible .theme__title {
 }
 
 /* --------------------------------------------------------------------------
+   Blog (posts link out to Substack)
+   -------------------------------------------------------------------------- */
+
+.blog {
+  .blog__actions { margin: 0 0 2rem !important; }
+
+  .entry__title a {
+    color: var(--global-highlight-color) !important;
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--global-link-color) !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  a.tag {
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--global-link-color);
+      border-color: var(--global-link-color);
+    }
+  }
+}
+
+.blog__subtitle { font-style: italic; }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 

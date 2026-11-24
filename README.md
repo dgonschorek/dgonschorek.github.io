@@ -15,6 +15,7 @@ Built with Jekyll on GitHub Pages, based on [Academic Pages](https://academicpag
 | News items (home page + `/news/`) | `_data/news.yml` |
 | Research page | `_pages/research.md` |
 | Resources page (code & datasets) | `_data/resources.yml` (entries), `_pages/resources.html` |
+| Blog (posts on Substack, listed on `/blog/`) | `_data/blog.yml` (entries), `_pages/blog.html` |
 | Publications (one file per paper) | `_publications/` |
 | Talks | `_talks/` |
 | Teaching, mentoring, outreach | `_teaching/` |
@@ -31,6 +32,12 @@ Copy an existing file in `_publications/` and edit the front matter:
 - `themes`: any of `retina`, `neuromodulation`, `colliculus`, `ml`, `data` (shown on the Research page)
 - `selected: true` to feature it on the home page
 - links: `paperurl`, `doi`, `preprint`, `pdf`, `code`, `data`, `colab`, `project` (leave empty if not available)
+
+### Adding a blog post
+
+Posts are written and published on Substack ([On Doing Science](https://dominicgonschorek.substack.com/)).
+To list a new one on `/blog/`, add an entry at the top of `_data/blog.yml` (title, date, Substack URL,
+optional subtitle, series and summary), and usually a matching item in `_data/news.yml`.
 
 ### Adding a talk or teaching entry
 

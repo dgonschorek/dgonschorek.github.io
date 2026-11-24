@@ -1,0 +1,31 @@
+---
+layout: archive
+title: "Blog"
+permalink: /blog/
+description: "Essays by Dominic Gonschorek on doing research and academic life, including the series Science in the Agentic Age, from the newsletter On Doing Science."
+lead: "I write about doing research and living an academic life in my newsletter, [*On Doing Science*](https://dominicgonschorek.substack.com/). Posts are published on Substack and listed here, newest first."
+author_profile: true
+page_class: blog
+redirect_from:
+  - /year-archive/
+  - /wordpress/blog-posts/
+---
+
+{%- comment -%}
+  Posts live in _data/blog.yml. They are published on Substack; each entry links out to it.
+{%- endcomment -%}
+
+<ul class="pub__links pub__links--buttons blog__actions">
+  <li><a href="https://dominicgonschorek.substack.com/"><i class="fas fa-pen-nib" aria-hidden="true"></i>On Doing Science</a></li>
+  <li><a href="https://dominicgonschorek.substack.com/subscribe"><i class="fas fa-envelope-open-text" aria-hidden="true"></i>Subscribe</a></li>
+</ul>
+
+{% assign years = site.data.blog | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for year in years %}
+  <section class="year-group">
+    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <ol class="entry-list">
+      {% for p in year.items %}{% include blog-item.html post=p %}{% endfor %}
+    </ol>
+  </section>
+{% endfor %}

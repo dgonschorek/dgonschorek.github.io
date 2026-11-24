@@ -1,0 +1,20 @@
+{%- comment -%}
+  One post on the Blog page (data in _data/blog.yml). Params: post
+{%- endcomment -%}
+{% assign p = include.post %}
+<li class="entry">
+  <div class="entry__date"><time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: "%b %-d, %Y" }}</time></div>
+  <div class="entry__body">
+    <h3 class="entry__title"><a href="{{ p.url }}">{{ p.title }}</a></h3>
+    {% if p.series or p.subtitle %}
+      <p class="entry__meta">
+        {% if p.series %}<a class="tag" href="{{ p.series.url }}">{{ p.series.name }}{% if p.series.part %} · Part {{ p.series.part }}{% endif %}</a>{% endif %}
+        {% if p.subtitle %}<span class="blog__subtitle">{{ p.subtitle }}</span>{% endif %}
+      </p>
+    {% endif %}
+    {% if p.summary %}<div class="entry__text">{{ p.summary | markdownify }}</div>{% endif %}
+    <ul class="pub__links" aria-label="Links for {{ p.title | escape }}">
+      <li><a href="{{ p.url }}"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>Read on Substack</a></li>
+    </ul>
+  </div>
+</li>

@@ -1,0 +1,23 @@
+# Blog posts, newest first, shown on /blog/ (see _pages/blog.html).
+# Posts are published in my Substack newsletter, On Doing Science
+# (https://dominicgonschorek.substack.com/); each entry links out to Substack.
+#
+# Fields:
+#   date      publication date (YYYY-MM-DD)
+#   title     post title, as on Substack
+#   subtitle  optional, as on Substack
+#   series    optional: name, url (the series page on Substack) and part
+#   url       link to the post on Substack
+#   summary   optional, one or two sentences (Markdown)
+
+- date: 2026-11-23
+  title: "Did I Do the Science?"
+  subtitle: "On asking for help and knowing what to do with the answer"
+  series:
+    name: "Science in the Agentic Age"
+    url: "https://dominicgonschorek.substack.com/t/science-in-the-agentic-age"
+    part: 1
+  url: "https://dominicgonschorek.substack.com/p/did-i-do-the-science"
+  summary: >-
+    The opening post of the series. AI agents now help me read colleagues' code, run the code from
+    unfamiliar papers and investigate odd data points. How much of that work is still mine?
