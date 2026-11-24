@@ -44,6 +44,7 @@ author:
   # Social
   linkedin         : "dominic-gonschorek"
   bluesky          : "dgonschorek.bsky.social"
+  substack         : "https://dominicgonschorek.substack.com/"   # newsletter On Doing Science (full URL)
 
 # Publication categories, in the order they appear on /publications/
 publication_category:
@@ -78,6 +79,7 @@ social:
     - "https://github.com/dgonschorek"
     - "https://www.linkedin.com/in/dominic-gonschorek"
     - "https://bsky.app/profile/dgonschorek.bsky.social"
+    - "https://dominicgonschorek.substack.com/"
 google_site_verification :
 bing_site_verification   :
 

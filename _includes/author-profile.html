@@ -50,6 +50,9 @@
       {% if author.bluesky %}
         <li><a href="https://bsky.app/profile/{{ author.bluesky }}" itemprop="sameAs" rel="me"><i class="fab fa-fw fa-bluesky icon-pad-right" aria-hidden="true"></i>Bluesky</a></li>
       {% endif %}
+      {% if author.substack %}
+        <li><a href="{{ author.substack }}" itemprop="sameAs" rel="me"><i class="fas fa-fw fa-pen-nib icon-pad-right" aria-hidden="true"></i>Substack</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
